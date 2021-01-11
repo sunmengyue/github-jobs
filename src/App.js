@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import Search from './components/Search';
+import Side from './components/Side';
+import Joblist from './components/Joblist';
+import Pagination from './components/Pagination';
+import './css/App.css';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='container'>
+      <h1>
+        <span>Github</span> Jobs
+      </h1>
+      <Search />
+      <Side />
+      <Joblist />
+      <Pagination />
     </div>
   );
-}
+};
 
 export default App;
