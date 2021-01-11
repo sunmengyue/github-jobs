@@ -10,6 +10,7 @@ const Search = () => {
         placeholder='Title, companies, expertise, or benefits'
         autoFocus
       />
+      <i className='fas fa-briefcase'></i>
       <button className='search-button' type='submit'>
         Search
       </button>
