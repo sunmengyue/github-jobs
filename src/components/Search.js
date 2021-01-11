@@ -7,10 +7,9 @@ const Search = () => {
       <input
         className='form-control'
         type='text'
-        placeholder='Title, companies, expertise, or benefits'
+        placeholder='&#xf0b1; &nbsp;Title, companies, expertise, or benefits'
         autoFocus
       />
-      <i className='fas fa-briefcase'></i>
       <button className='search-button' type='submit'>
         Search
       </button>
