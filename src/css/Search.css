@@ -22,11 +22,6 @@
 }
 
 #search-container .form-control::placeholder {
-  /* 
-  font-weight: 400;
-  color: #b9bdcf;
-  position: absolute;
-  */
   font-family: 'Roboto', FontAwesome;
   color: #b9bdcf;
 }
