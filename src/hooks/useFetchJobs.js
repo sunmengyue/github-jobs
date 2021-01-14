@@ -37,6 +37,7 @@ export default function useFetchJobs(terms, page) {
     dispatch({ type: ACTIONS.MAKE_REQUEST });
     axios
       .get(BASE_URL, {
+        cancelToken: cancelToken.token,
         params: { markdown: true, page: page, ...terms },
       })
       .then((res) => {
@@ -46,6 +47,7 @@ export default function useFetchJobs(terms, page) {
         if (axios.isCancel(e)) return;
         dispatch({ type: ACTIONS.ERROR, payload: { error: e } });
       });
+
     return () => {
       cancelToken.cancel();
     };

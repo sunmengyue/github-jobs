@@ -9,7 +9,7 @@ import './css/App.css';
 const App = () => {
   const [terms, setTerms] = useState({});
   const [page, setPate] = useState(1);
-  const { jobs, loading, error } = useFetchJobs({ terms, page });
+  const { jobs, loading, error } = useFetchJobs(terms, page);
 
   return (
     <div className='container'>
