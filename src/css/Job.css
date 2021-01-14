@@ -1,0 +1,71 @@
+.job-container {
+  padding: 10px;
+  font-family: 'Roboto';
+  color: #334680;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 4px;
+}
+
+.job-container .job-desc {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.job-container .job-desc .logo img {
+  width: 90px;
+  height: 90px;
+  border-radius: 4px;
+}
+
+.job-container .job-desc .logo {
+  padding: 1rem;
+}
+
+.job-container .job-desc .job {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.job-company,
+.job-type,
+.job-title {
+  margin-bottom: 0.65rem;
+}
+
+.job-type {
+  font-size: 1.125rem;
+}
+
+.job-company,
+.job-type {
+  font-weight: 700;
+  font-size: 0.75rem;
+}
+
+.job-type {
+  border: 1px solid #334680;
+  padding: 5px;
+  border-radius: 4px;
+}
+
+.job-container .location-time {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  color: #b9bdcf;
+  font-weight: 500;
+  font-size: 0.75rem;
+}
+
+.job-container .location-time i {
+  margin-right: 0.5rem;
+}
+
+.location {
+  margin-right: 2rem;
+}
