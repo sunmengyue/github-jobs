@@ -16,7 +16,7 @@ const Job = ({ job }) => {
       </div>
       <div className='location-time'>
         <div className='location'>
-          <i class='fa fa-globe' aria-hidden='true'></i>
+          <i className='fa fa-globe' aria-hidden='true'></i>
           {job.location}
         </div>
         <div className='time'>

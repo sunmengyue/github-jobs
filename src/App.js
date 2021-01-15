@@ -15,13 +15,14 @@ const App = () => {
     <div className='container'>
       {loading && <h1>is Loading</h1>}
       {error && <h1>error, Try refreshing</h1>}
-
       <h1>
         <span>Github</span> Jobs
       </h1>
       <Search />
-      <Side />
-      <Joblist jobs={jobs} />
+      <main>
+        <Side />
+        <Joblist jobs={jobs} />
+      </main>
       <Pagination />
     </div>
   );
