@@ -138,6 +138,7 @@
   color: #b9bdcf;
   font-size: 0.875rem;
   text-transform: uppercase;
+  margin-bottom: 1rem;
 }
 
 .location-input .form-control::placeholder {

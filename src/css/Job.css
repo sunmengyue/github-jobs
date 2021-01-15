@@ -1,4 +1,5 @@
 .job-container {
+  background: #fff;
   padding: 10px;
   font-family: 'Roboto';
   color: #334680;
@@ -6,6 +7,10 @@
   align-items: center;
   justify-content: space-between;
   border-radius: 4px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
+  flex: 2;
+  margin-left: 2rem;
+  margin-bottom: 3rem;
 }
 
 .job-container .job-desc {
@@ -15,6 +20,7 @@
 }
 
 .job-container .job-desc .logo img {
+  object-fit: contain;
   width: 90px;
   height: 90px;
   border-radius: 4px;
@@ -55,17 +61,19 @@
 
 .job-container .location-time {
   display: flex;
-  align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   color: #b9bdcf;
-  font-weight: 500;
-  font-size: 0.75rem;
 }
 
 .job-container .location-time i {
   margin-right: 0.5rem;
 }
 
-.location {
+.job-container .location-time .location,
+.job-container .location-time .time {
   margin-right: 2rem;
+  font-family: 'Roboto';
+  font-weight: 500;
+  font-size: 0.75rem;
+  display: inline-block;
 }

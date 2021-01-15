@@ -21,6 +21,10 @@
   border-radius: 4px;
 }
 
+#search-container .form-control:focus {
+  outline: none;
+}
+
 #search-container .form-control::placeholder {
   font-family: 'Roboto', FontAwesome;
   color: #b9bdcf;
