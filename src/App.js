@@ -8,8 +8,18 @@ import './css/App.css';
 
 const App = () => {
   const [terms, setTerms] = useState({});
-  const [page, setPate] = useState(1);
+  const [page, setPage] = useState(1);
   const { jobs, loading, error } = useFetchJobs(terms, page);
+  const [postsPerPage, setPostsPerPge] = useState(5);
+
+  // Get job posts on current page
+  const indexOfLastPost = page * postsPerPage;
+  const indexOfFirstPost = indexOfLastPost - postsPerPage;
+  const currentPosts = jobs.slice(indexOfFirstPost, indexOfLastPost);
+
+  const paginate = (pageNumber) => {
+    setPage(pageNumber);
+  };
 
   return (
     <div className='container'>
@@ -21,9 +31,13 @@ const App = () => {
       <Search />
       <main>
         <Side />
-        <Joblist jobs={jobs} />
+        <Joblist jobs={currentPosts} />
       </main>
-      <Pagination />
+      <Pagination
+        postsPerPage={postsPerPage}
+        totalPosts={jobs.length}
+        paginate={paginate}
+      />
     </div>
   );
 };

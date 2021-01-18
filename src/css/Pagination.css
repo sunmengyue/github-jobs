@@ -1,0 +1,32 @@
+.pagination {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.pagination li {
+  list-style: none;
+  border: 1px solid #b7bcce;
+  border-radius: 4px;
+  padding: 6px 14px;
+  margin: 0 4px;
+}
+
+.pagination li a {
+  text-decoration: none;
+  color: #b9bdcf;
+  font-family: 'Roboto';
+  font-weight: 400;
+  font-size: 0.75rem;
+  cursor: pointer;
+}
+
+.pagination li a.active {
+  color: #fff;
+  background-color: #1e86ff;
+  border: 1px solid #1e86ff;
+}
+
+.pagination li:hover:not(.active) {
+  color: #1e86ff;
+  border: 1px solid #1e86ff;
+}
