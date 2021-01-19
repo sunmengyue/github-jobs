@@ -9,8 +9,8 @@ import './css/App.css';
 const App = () => {
   const [terms, setTerms] = useState({});
   const [page, setPage] = useState(1);
-  const { jobs, loading, error } = useFetchJobs(terms, page);
-  const [postsPerPage, setPostsPerPge] = useState(5);
+  const { jobs, loading, error, hasNextPage } = useFetchJobs(terms, page);
+  const [postsPerPage, setPostsPerPge] = useState(10);
 
   // Get job posts on current page
   const indexOfLastPost = page * postsPerPage;
@@ -28,15 +28,24 @@ const App = () => {
       <h1>
         <span>Github</span> Jobs
       </h1>
+      <Pagination
+        page={page}
+        postsPerPage={postsPerPage}
+        totalPosts={jobs.length}
+        paginate={paginate}
+        hasNextPage={hasNextPage}
+      />
       <Search />
       <main>
         <Side />
         <Joblist jobs={currentPosts} />
       </main>
       <Pagination
+        page={page}
         postsPerPage={postsPerPage}
         totalPosts={jobs.length}
         paginate={paginate}
+        hasNextPage={hasNextPage}
       />
     </div>
   );
