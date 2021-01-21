@@ -1,12 +1,17 @@
 import React from 'react';
 import '../css/Side.css';
 
-const Side = () => {
+const Side = ({ terms, onTermChange }) => {
   return (
     <div id='side-bar'>
       <label className='checkbox-container'>
-        Full time
-        <input type='checkbox' />
+        Only Full Time
+        <input
+          type='checkbox'
+          onChange={onTermChange}
+          value={terms.full_time}
+          name='full_time'
+        />
         <span className='checkmark'></span>
       </label>
 
@@ -15,6 +20,8 @@ const Side = () => {
         <input
           className='form-control'
           type='text'
+          name='location'
+          value={terms.location}
           placeholder='&#xf0ac; &nbsp;city, state, zip code, or country'
           autoFocus
         />

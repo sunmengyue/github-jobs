@@ -42,7 +42,7 @@ const App = () => {
       />
       <Search terms={terms} onTermChange={handleTermChange} />
       <main>
-        <Side />
+        <Side terms={terms} onTermChange={handleTermChange} />
         <Joblist jobs={currentPosts} />
       </main>
       <Pagination
