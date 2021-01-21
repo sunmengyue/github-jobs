@@ -17,9 +17,14 @@ const App = () => {
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
   const currentPosts = jobs.slice(indexOfFirstPost, indexOfLastPost);
 
-  const paginate = (pageNumber) => {
-    setPage(pageNumber);
-  };
+  function handleTermChange(e) {
+    const term = e.target.name;
+    const value = e.target.value;
+    setPage(1);
+    setTerms((prevTerms) => {
+      return { ...prevTerms, [term]: value };
+    });
+  }
 
   return (
     <div className='container'>
@@ -32,10 +37,10 @@ const App = () => {
         page={page}
         postsPerPage={postsPerPage}
         totalPosts={jobs.length}
-        paginate={paginate}
+        setPage={setPage}
         hasNextPage={hasNextPage}
       />
-      <Search />
+      <Search terms={terms} onTermChange={handleTermChange} />
       <main>
         <Side />
         <Joblist jobs={currentPosts} />
@@ -44,7 +49,7 @@ const App = () => {
         page={page}
         postsPerPage={postsPerPage}
         totalPosts={jobs.length}
-        paginate={paginate}
+        setPage={setPage}
         hasNextPage={hasNextPage}
       />
     </div>
