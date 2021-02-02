@@ -13,9 +13,9 @@ const App = () => {
   const [postsPerPage, setPostsPerPge] = useState(10);
 
   // Get job posts on current page
-  const indexOfLastPost = page * postsPerPage;
-  const indexOfFirstPost = indexOfLastPost - postsPerPage;
-  const currentPosts = jobs.slice(indexOfFirstPost, indexOfLastPost);
+  // const indexOfLastPost = page * postsPerPage;
+  // const indexOfFirstPost = indexOfLastPost - postsPerPage;
+  // const currentPosts = jobs.slice(indexOfFirstPost, indexOfLastPost);
 
   function handleTermChange(e) {
     const term = e.target.name;
@@ -43,7 +43,7 @@ const App = () => {
       <Search terms={terms} onTermChange={handleTermChange} />
       <main>
         <Side terms={terms} onTermChange={handleTermChange} />
-        <Joblist jobs={currentPosts} />
+        <Joblist jobs={jobs} />
       </main>
       <Pagination
         page={page}
